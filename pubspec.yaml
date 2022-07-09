@@ -1,7 +1,7 @@
 name: ravencoin_electrum
 description: A client for Ravencoin ElectrumX servers
 version: 2.0.0
-homepage: https://github.com/moontree/ravencoin_electrum
+homepage: https://github.com/moontreeapp/ravencoin_electrum
 publish_to: none
 
 environment:
