@@ -5,7 +5,7 @@
 
 import '../../ravencoin_electrum.dart';
 
-/// https://github.com/moontreeapp/raven_front/issues/5
+/// https://github.com/moontreeapp/moontree/issues/5
 /// we assume one transaction can only have one OP_RETURN
 String parseAsmForMemo(String asm) {
   var x = asm.split(' ');
