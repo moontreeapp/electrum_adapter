@@ -9,30 +9,27 @@ class ScripthashUnspent with EquatableMixin {
   int txPos;
   int value;
   String? symbol; // symbol of asset null is rvn itself.
-  late String? memo; // memo grabbed after the fact
 
-  ScripthashUnspent(
-      {required this.scripthash,
-      required this.height,
-      required this.txHash,
-      required this.txPos,
-      required this.value,
-      this.symbol,
-      this.memo});
+  ScripthashUnspent({
+    required this.scripthash,
+    required this.height,
+    required this.txHash,
+    required this.txPos,
+    required this.value,
+    this.symbol,
+  });
 
-  factory ScripthashUnspent.empty() {
-    return ScripthashUnspent(
-        scripthash: '', height: -1, txHash: '', txPos: -1, value: 0);
-  }
+  factory ScripthashUnspent.empty() => ScripthashUnspent(
+      scripthash: '', height: -1, txHash: '', txPos: -1, value: 0);
 
   @override
   List<Object> get props =>
-      [scripthash, txHash, txPos, value, height, symbol ?? '', memo ?? ''];
+      [scripthash, txHash, txPos, value, height, symbol ?? ''];
 
   @override
-  String toString() {
-    return 'ScripthashUnspent(scripthash: $scripthash, txHash: $txHash, txPos: $txPos, value: $value, height: $height, symbol: $symbol, memo: $memo)';
-  }
+  String toString() =>
+      'ScripthashUnspent(scripthash: $scripthash, txHash: $txHash, '
+      'txPos: $txPos, value: $value, height: $height, symbol: $symbol)';
 }
 
 extension GetUnspentMethod on RavenElectrumClient {
