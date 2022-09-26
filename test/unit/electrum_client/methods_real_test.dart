@@ -17,8 +17,8 @@ void main() {
             symbol: 'MOONTREE',
             satsInCirculation: 100000000000000,
             divisions: 0,
-            reissuable: 1,
-            hasIpfs: 1,
+            reissuable: true,
+            hasIpfs: true,
             source: TxSource(
                 txHash:
                     '4e769a6d770b4e441ade1d5600926ad14f58fdb6ae4128ed03c811241ec72240',

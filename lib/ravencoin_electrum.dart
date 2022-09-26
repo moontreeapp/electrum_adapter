@@ -53,7 +53,7 @@ class RavenElectrumClient extends SubscribingClient {
     Duration aliveTimerDuration = conn.aliveTimerDuration,
     bool acceptUnverified = true,
     String clientName = 'MTWallet',
-    String protocolVersion = '1.9',
+    String protocolVersion = '1.10',
   }) async {
     var client = RavenElectrumClient(await conn.connect(
       host,

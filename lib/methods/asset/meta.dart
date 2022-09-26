@@ -25,8 +25,8 @@ class AssetMeta with EquatableMixin {
   final String symbol;
   final int satsInCirculation;
   final int divisions;
-  final int reissuable;
-  final int hasIpfs;
+  final bool reissuable;
+  final bool hasIpfs;
   final TxSource source;
 
   AssetMeta(
