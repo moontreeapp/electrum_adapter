@@ -42,8 +42,9 @@ class Header {
 class RavenElectrumClient extends SubscribingClient {
   RavenElectrumClient(channel) : super(channel);
   String clientName = 'MTWallet';
+  String clientVersion = '1.0';
   String host = '';
-  String protocolVersion = '1.9';
+  String protocolVersion = '1.10';
   int port = 50002;
 
   static Future<RavenElectrumClient> connect(
@@ -53,6 +54,7 @@ class RavenElectrumClient extends SubscribingClient {
     Duration aliveTimerDuration = conn.aliveTimerDuration,
     bool acceptUnverified = true,
     String clientName = 'MTWallet',
+    String clientVersion = '1.0',
     String protocolVersion = '1.10',
   }) async {
     var client = RavenElectrumClient(await conn.connect(
@@ -67,7 +69,8 @@ class RavenElectrumClient extends SubscribingClient {
     client.protocolVersion = protocolVersion;
     client.port = port;
     await client.serverVersion(
-        clientName: clientName, protocolVersion: protocolVersion);
+        clientName: '$clientName/$clientVersion',
+        protocolVersion: protocolVersion);
     return client;
   }
 
