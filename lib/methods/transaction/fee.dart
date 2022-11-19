@@ -1,4 +1,4 @@
-import '../../ravencoin_electrum.dart';
+import '../../electrum_adapter.dart';
 
 extension GetFeeEstimateMethod on RavenElectrumClient {
   Future<double> getRelayFee() async => ((await request(

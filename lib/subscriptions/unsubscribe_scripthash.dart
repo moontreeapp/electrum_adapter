@@ -1,4 +1,4 @@
-import '../ravencoin_electrum.dart';
+import '../electrum_adapter.dart';
 
 extension UnsubscribeScripthashMethod on RavenElectrumClient {
   Future<bool> unsubscribeScripthash(scripthash) async => await request(

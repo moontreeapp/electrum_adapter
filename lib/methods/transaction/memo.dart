@@ -3,7 +3,7 @@
 /// use it to get the memo from a transaction, thus, I added this code to
 /// accomplish only that.
 
-import '../../ravencoin_electrum.dart';
+import '../../electrum_adapter.dart';
 
 /// https://github.com/moontreeapp/moontree/issues/5
 /// we assume one transaction can only have one OP_RETURN

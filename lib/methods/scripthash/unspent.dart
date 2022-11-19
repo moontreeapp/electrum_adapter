@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../ravencoin_electrum.dart';
+import '../../electrum_adapter.dart';
 
 class ScripthashUnspent with EquatableMixin {
   String scripthash;

@@ -1,4 +1,4 @@
-import '../../ravencoin_electrum.dart';
+import '../../electrum_adapter.dart';
 
 class ServerVersion {
   String name;

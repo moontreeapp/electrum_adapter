@@ -1,5 +1,5 @@
 import '../client/subscribing_client.dart';
-import '../ravencoin_electrum.dart';
+import '../electrum_adapter.dart';
 
 extension SubscribeAssetMethod on RavenElectrumClient {
   Future<Stream<String?>> subscribeAsset(String assetName) async {
