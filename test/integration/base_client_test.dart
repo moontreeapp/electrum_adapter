@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
-import 'package:ravencoin_electrum/connect.dart';
-import 'package:ravencoin_electrum/client/base_client.dart';
+import 'package:electrum_adapter/connect.dart';
+import 'package:electrum_adapter/client/base_client.dart';
 
 void main() {
   group('BaseClient', () {

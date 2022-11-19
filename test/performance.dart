@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
 import 'package:timing/timing.dart';
 
-import 'package:ravencoin_electrum/ravencoin_electrum.dart';
+import 'package:electrum_adapter/electrum_adapter.dart';
 
 void main() {
   group('ElectrumClient', () {

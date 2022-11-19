@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
 
-import 'package:ravencoin_electrum/ravencoin_electrum.dart';
+import 'package:electrum_adapter/electrum_adapter.dart';
 
 void main() {
   group('electrum_client', () {

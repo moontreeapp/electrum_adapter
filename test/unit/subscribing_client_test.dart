@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:ravencoin_electrum/client/subscribing_client.dart';
+import 'package:electrum_adapter/client/subscribing_client.dart';
 
 import './mock_electrum_server.dart';
 

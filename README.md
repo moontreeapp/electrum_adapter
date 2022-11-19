@@ -7,7 +7,7 @@ The Ravencoin ElectrumX server is quite similar to the Bitcion Electrum server, 
 ## Usage
 
 ```dart
-import 'package:ravencoin_electrum/ravencoin_electrum.dart';
+import 'package:electrum_adapter/electrum_adapter.dart';
 
 void main() async {
   var client =

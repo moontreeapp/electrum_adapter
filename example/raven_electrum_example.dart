@@ -1,4 +1,4 @@
-import 'package:ravencoin_electrum/ravencoin_electrum.dart';
+import 'package:electrum_adapter/electrum_adapter.dart';
 
 void main() async {
   var client =

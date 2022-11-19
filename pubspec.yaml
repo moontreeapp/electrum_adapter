@@ -1,7 +1,7 @@
-name: ravencoin_electrum
+name: electrum_adapter
 description: A client for Ravencoin ElectrumX servers
 version: 2.0.0
-homepage: https://github.com/moontreeapp/ravencoin_electrum
+homepage: https://github.com/moontreeapp/electrum_adapter
 publish_to: none
 
 environment:
@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   # every version of flutter_test from sdk depends on async 2.6.1
-  # and every version of ravencoin_electrum from git depends on async ^2.7.0...
+  # and every version of electrum_adapter from git depends on async ^2.7.0...
   async: ^2.9.0 #^2.7.0
   equatable: ^2.0.5
   json_rpc_2: ^3.0.2
