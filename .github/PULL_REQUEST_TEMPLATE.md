@@ -12,6 +12,6 @@
 
 <!-- **Issue(s) Addressed** -->
 
-- [Issue: # ](www.github.com/moontreeapp/ravencoin_electrum/issues/???)
-- [Issue: # ](www.github.com/moontreeapp/ravencoin_electrum/issues/???)
-- [Issue: # ](www.github.com/moontreeapp/ravencoin_electrum/issues/???)
+- [Issue: # ](www.github.com/moontreeapp/electrum_adapter/issues/???)
+- [Issue: # ](www.github.com/moontreeapp/electrum_adapter/issues/???)
+- [Issue: # ](www.github.com/moontreeapp/electrum_adapter/issues/???)

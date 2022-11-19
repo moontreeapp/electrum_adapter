@@ -26,11 +26,11 @@ class _JsonNewlineTransformer
       //if (data is List) {
       //  //  /// todo: fix lower layers so this never happens.
       //  //  print('ERROR @ '
-      //  //      'ravencoin_electrum.lib.client.json_newline_transformer.dart: $data');
+      //  //      'electrum_adapter.lib.client.json_newline_transformer.dart: $data');
       //  for (var d in data) {
       //    if ((d as Map).containsKey('error')) {
       //      print('ERROR @ '
-      //          'ravencoin_electrum.lib.client.json_newline_transformer.dart: $d');
+      //          'electrum_adapter.lib.client.json_newline_transformer.dart: $d');
       //      //sink.close();
       //    }
       //  }

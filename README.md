@@ -22,4 +22,4 @@ void main() async {
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: https://github.com/moontreeapp/ravencoin_electrum/issues
+[tracker]: https://github.com/moontreeapp/electrum_adapter/issues
