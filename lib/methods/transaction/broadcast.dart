@@ -1,10 +1,10 @@
 import '../../electrum_adapter.dart';
 
 extension BroadcastTransactionMethod on RavenElectrumClient {
-  Future<String> broadcastTransaction(String rawTx) async => await request(
+  Future<String> broadcastTransaction(String rawTx) async => request(
         'blockchain.transaction.broadcast',
         [rawTx],
-      );
+      ) as String;
 
   /// returns transaction hashs as hexadecimal strings in the same order as rawTxs passed in
   Future<List<String>> broadcastTransactions(List<String> rawTxs) async {
