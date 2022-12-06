@@ -1,7 +1,7 @@
 import '../electrum_adapter.dart';
 
 extension UnsubscribeScripthashMethod on RavenElectrumClient {
-  Future<bool> unsubscribeScripthash(scripthash) async => request(
+  Future<bool> unsubscribeScripthash(scripthash) async => await request(
         'blockchain.scripthash.unsubscribe',
         [scripthash],
       ) as bool;
