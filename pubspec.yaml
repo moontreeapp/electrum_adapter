@@ -1,6 +1,6 @@
 name: electrum_adapter
 description: A client for Ravencoin ElectrumX servers
-version: 2.0.2
+version: 2.0.3
 homepage: https://github.com/moontreeapp/electrum_adapter
 
 environment:

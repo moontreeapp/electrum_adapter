@@ -9,7 +9,7 @@ class ScripthashHistory with EquatableMixin {
   ScripthashHistory({required this.height, required this.txHash, this.memo});
 
   @override
-  List<Object> get props => [height, txHash, memo ?? ''];
+  List<Object> get props => <Object>[height, txHash, memo ?? ''];
 
   @override
   String toString() {

@@ -12,7 +12,7 @@ class TxScriptSig with EquatableMixin {
   TxScriptSig({required this.asm, required this.hex});
 
   @override
-  List<Object?> get props => [asm, hex];
+  List<Object?> get props => <Object?>[asm, hex];
 }
 
 /// vin: [{
@@ -40,7 +40,8 @@ class TxVin with EquatableMixin {
   }
 
   @override
-  List<Object?> get props => [coinbase, sequence, txid, vout, scriptSig];
+  List<Object?> get props =>
+      <Object?>[coinbase, sequence, txid, vout, scriptSig];
 }
 
 /// scriptPubKey: {
@@ -112,7 +113,7 @@ class TxScriptPubKey with EquatableMixin {
   });
 
   @override
-  List<Object?> get props => [
+  List<Object?> get props => <Object?>[
         asm,
         hex,
         type,
@@ -214,7 +215,7 @@ class TxVout with EquatableMixin {
   });
 
   @override
-  List<Object?> get props => [value, n, valueSat, scriptPubKey];
+  List<Object?> get props => <Object?>[value, n, valueSat, scriptPubKey];
 
   String? get memo => scriptPubKey.memo; // op return memo
   String? get assetMemo => scriptPubKey.assetMemo; // transactional asset memo
@@ -271,7 +272,7 @@ class Tx with EquatableMixin {
   });
 
   @override
-  List<Object?> get props => [
+  List<Object?> get props => <Object?>[
         txid,
         hash,
         version,

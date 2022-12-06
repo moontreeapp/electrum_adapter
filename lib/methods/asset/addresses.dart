@@ -19,7 +19,7 @@ class AssetAddresses with EquatableMixin {
       asset.endsWith('!') ? assetCountByAddress.keys.toList()[0] : '';
 
   @override
-  List<Object> get props => [assetCountByAddress];
+  List<Object> get props => <Object>[assetCountByAddress];
 
   @override
   String toString() {

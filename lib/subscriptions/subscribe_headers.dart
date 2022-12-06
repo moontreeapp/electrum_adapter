@@ -10,7 +10,7 @@ class BlockHeader extends Equatable {
   BlockHeader(this.hex, this.height);
 
   @override
-  List<Object> get props => [hex, height];
+  List<Object> get props => <Object>[hex, height];
 }
 
 extension SubscribeHeadersMethod on RavenElectrumClient {

@@ -10,7 +10,7 @@ class TxSource with EquatableMixin {
   TxSource({required this.txHash, required this.txPos, required this.height});
 
   @override
-  List<Object> get props => [txHash, txPos, height];
+  List<Object> get props => <Object>[txHash, txPos, height];
 
   @override
   String toString() {

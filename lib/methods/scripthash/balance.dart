@@ -12,7 +12,7 @@ class ScripthashBalance with EquatableMixin {
   }
 
   @override
-  List<Object> get props => [confirmed, unconfirmed];
+  List<Object> get props => <Object>[confirmed, unconfirmed];
 
   @override
   String toString() {
@@ -37,7 +37,7 @@ class ScripthashAssetBalances with EquatableMixin {
   }
 
   @override
-  List<Object> get props => [confirmed, unconfirmed];
+  List<Object> get props => <Object>[confirmed, unconfirmed];
 
   @override
   String toString() {
