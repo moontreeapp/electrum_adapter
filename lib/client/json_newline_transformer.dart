@@ -1458,6 +1458,15 @@ abstract class _ChunkedJsonParser<T> {
       if (position == chunkEnd) message = "Unexpected end of input";
     }
     throw FormatException(message, chunk, position);
+    /* keep getting this error here:
+  E/flutter ( 7778): [ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: FormatException: Unterminated string (at character 8192)
+  E/flutter ( 7778): ...","reqSigs":1,"type":"pubkeyhash","addresses":["ENMtLdEmzjRMZCgxFHh4JFDN2UB
+  E/flutter ( 7778):                                                                               ^
+  E/flutter ( 7778): #0      _ChunkedJsonParser.fail package:electrum_adapter/client/json_newline_transformer.dart:1460
+  E/flutter ( 7778): #1      _ChunkedJsonParser.close package:electrum_adapter/client/json_newline_transformer.dart:599
+  E/flutter ( 7778): #2      _JsonStringDecoderSink.close package:electrum_adapter/client/json_newline_transformer.dart:1564
+  ...
+  */
   }
 }
 
