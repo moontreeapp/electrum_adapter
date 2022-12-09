@@ -15,9 +15,14 @@
 
 # Uncomment the following section to specify additional rules.
 
-# linter:
-#   rules:
-#     - camel_case_types
+linter:
+  rules:
+    avoid_print: false
+    prefer_relative_imports: false
+    omit_local_variable_types: false   
+    implementation_imports: false
+    constant_identifier_names: false
+    non_constant_identifier_names: false
 
 # analyzer:
 #   exclude:
