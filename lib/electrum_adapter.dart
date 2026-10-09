@@ -55,6 +55,7 @@ class RavenElectrumClient extends SubscribingClient {
     bool acceptUnverified = true,
     String clientName = 'MTWallet',
     String clientVersion = '1.0',
+    String? minProtocolVersion = '1.4',
     String protocolVersion = '1.10',
   }) async {
     var client = RavenElectrumClient(await conn.connect(
@@ -66,11 +67,12 @@ class RavenElectrumClient extends SubscribingClient {
     ));
     client.clientName = clientName;
     client.host = host;
-    client.protocolVersion = protocolVersion;
     client.port = port;
-    await client.serverVersion(
+    var version = await client.serverVersion(
         clientName: '$clientName/$clientVersion',
+        minProtocolVersion: minProtocolVersion,
         protocolVersion: protocolVersion);
+    client.protocolVersion = version.protocol;
     return client;
   }
 
