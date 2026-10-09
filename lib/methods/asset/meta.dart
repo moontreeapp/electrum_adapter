@@ -69,8 +69,8 @@ extension GetAssetMetaMethod on RavenElectrumClient {
         symbol: symbol,
         satsInCirculation: response['sats_in_circulation'],
         divisions: response['divisions'],
-        reissuable: response['reissuable'],
-        hasIpfs: response['has_ipfs'],
+        reissuable: _flag(response['reissuable']),
+        hasIpfs: _flag(response['has_ipfs']),
         source: TxSource(
             txHash: response['source']['tx_hash'],
             txPos: response['source']['tx_pos'],
@@ -93,4 +93,12 @@ extension GetAssetMetaMethod on RavenElectrumClient {
     List<AssetMeta?> results = await Future.wait<AssetMeta?>(futures);
     return results;
   }
+}
+
+/// ElectrumX Ravencoin sends asset flags as 1 or 0. Anything else is an
+/// error, not false.
+bool _flag(Object? value) {
+  if (value == true || value == 1) return true;
+  if (value == false || value == 0) return false;
+  throw FormatException('Expected an asset flag of 0 or 1', value);
 }

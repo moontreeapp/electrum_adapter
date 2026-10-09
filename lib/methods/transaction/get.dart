@@ -173,15 +173,8 @@ class TxScriptPubKey with EquatableMixin {
       'addresses: $addresses, asset: $asset, amount: $amount, units: $units, '
       'reissuable: $reissuable, assetMemo: $assetMemo, ipfsHash: $ipfsHash)';
 
-  String? get memo {
-    var x = asm.split(' ');
-    var i = 0;
-    for (var item in x) {
-      if (item == 'OP_RETURN') return hex.substring(2);
-      i = i + 1;
-    }
-    return null;
-  }
+  /// The data pushed after OP_RETURN; see [memoFromScript].
+  String? get memo => memoFromScript(hex);
 
   /// not used - getMeta is used in preference to this
   Map<String, dynamic> get assetData => type == 'new_asset'
@@ -338,11 +331,11 @@ extension GetTransactionMethod on RavenElectrumClient {
       vin: vins,
       vout: vouts,
       hex: response['hex'],
-      blockhash: response['blockhash'],
-      height: response['height'],
-      confirmations: response['confirmations'],
-      time: response['time'],
-      blocktime: response['blocktime'],
+      blockhash: response['blockhash'] as String?,
+      height: response['height'] as int?,
+      confirmations: response['confirmations'] as int?,
+      time: response['time'] as int?,
+      blocktime: response['blocktime'] as int?,
       memo: null, // to be implemented - look for a blank vout with op return?
     );
   }
