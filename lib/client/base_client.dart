@@ -53,7 +53,7 @@ class BaseClient {
   }
 
   void handleError(error, trace) {
-    print(error + ' 1');
+    print(error);
     var simpleTrace = Trace.from(trace);
     print(simpleTrace.terse);
   }

@@ -1,3 +1,4 @@
+import 'package:json_rpc_2/json_rpc_2.dart' as rpc;
 import 'package:test/test.dart';
 import 'package:electrum_adapter/client/base_client.dart';
 
@@ -22,6 +23,13 @@ void main() {
 
       server.willRespondWith('test', 'two');
       expect(await client.request('test'), 'two');
+    });
+
+    test('logs an unhandled RPC error', () {
+      expect(
+          () => client.handleError(
+              rpc.RpcException(1, 'use server.version'), StackTrace.current),
+          prints(contains('use server.version')));
     });
   });
 }
