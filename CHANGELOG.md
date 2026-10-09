@@ -1,3 +1,8 @@
+## Unreleased
+
+- Verify TLS certificates by default and allow callers to supply a custom
+  `SecurityContext` for self-signed server certificates.
+
 ## 2.0.0
 
 - Rename package from ravencoin_electrum_client to ravencoin_electrum

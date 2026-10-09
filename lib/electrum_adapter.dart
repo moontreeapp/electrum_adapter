@@ -4,6 +4,7 @@
 library electrum_adapter;
 
 import 'dart:async';
+import 'dart:io';
 
 import 'connect.dart' as conn;
 import 'client/subscribing_client.dart';
@@ -52,7 +53,8 @@ class RavenElectrumClient extends SubscribingClient {
     int port = 50002,
     Duration connectionTimeout = conn.connectionTimeout,
     Duration aliveTimerDuration = conn.aliveTimerDuration,
-    bool acceptUnverified = true,
+    bool acceptUnverified = false,
+    SecurityContext? securityContext,
     String clientName = 'MTWallet',
     String clientVersion = '1.0',
     String protocolVersion = '1.10',
@@ -63,6 +65,7 @@ class RavenElectrumClient extends SubscribingClient {
       connectionTimeout: connectionTimeout,
       aliveTimerDuration: aliveTimerDuration,
       acceptUnverified: acceptUnverified,
+      securityContext: securityContext,
     ));
     client.clientName = clientName;
     client.host = host;
