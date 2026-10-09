@@ -1,4 +1,7 @@
 // dart --sound-null-safety test test/integration/get_stats_test.dart --concurrency=1
+@Tags(['integration'])
+library get_asset_meta_integration_test;
+
 import 'package:test/test.dart';
 import 'package:electrum_adapter/electrum_adapter.dart';
 

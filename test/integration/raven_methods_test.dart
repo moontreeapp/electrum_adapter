@@ -1,3 +1,6 @@
+@Tags(['integration'])
+library raven_methods_integration_test;
+
 import 'package:test/test.dart';
 import 'package:electrum_adapter/electrum_adapter.dart';
 
